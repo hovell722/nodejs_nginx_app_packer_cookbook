@@ -11,3 +11,7 @@ package 'nodejs'
 service 'nginx' do
   action [:enable, :start]
 end
+
+template "etc/nginx/sites-available/proxy.conf" do
+  source 'proxy.conf.erb'
+end
