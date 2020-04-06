@@ -1,4 +1,4 @@
-# Nodejs and Nginx Cookbook Eng54 :penguin: (y)
+# Nodejs and Nginx Cookbook Eng54 :penguin:
 
 This cookbook will install nodejs and nginx.
 
@@ -10,6 +10,7 @@ To use it import it in your own cookbook and run it in the recipies.
 - Chef, Inspec, Chefspec
 - Importing Cookbooks (will require our search)
 - Attributes, and Templates
+- TDD
 
 
 ## Installation
