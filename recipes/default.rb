@@ -9,8 +9,8 @@ apt_update 'update_sources' do
 end
 
 package 'nginx'
-package 'nodejs'
-package 'npm'
+# package 'nodejs'
+# package 'npm'
 
 
 service 'nginx' do
@@ -20,6 +20,7 @@ end
 # Creating template in machine
 template '/etc/nginx/sites-available/proxy.conf' do
   source 'proxy.conf.erb'
+  variables proxy_port: node['nginx']['proxy_port']
   notifies :restart, 'service[nginx]'
 end
 
@@ -39,5 +40,5 @@ include_recipe 'nodejs'
 # does not install npm by default
 
 
-nodejs_npm 'pm2'
-nodejs_npm 'react'
+npm_package 'pm2'
+npm_package 'react'
