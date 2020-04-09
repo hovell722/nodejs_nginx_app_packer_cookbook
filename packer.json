@@ -43,7 +43,7 @@
     },
     {
       "type": "file",
-      "source": "app",
+      "source": "app/",
       "destination": "/home/ubuntu/app"
     },
     {
