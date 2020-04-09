@@ -29,6 +29,14 @@
     },
     "instance_type": "t2.micro",
     "ssh_username": "ubuntu",
-    "ami_name": "example-node-app-yourname-{{timestamp}}"
-  }]
+    "ami_name": "eng54-james-node-app-{{timestamp}}"
+  }],
+  "provisioners": [
+    {
+      "type": "chef-solo",
+      "cookbook_paths": ["./cookbooks"],
+      "run_list": ["nodejs_nginx::default"]
+
+    }
+  ]
 }
